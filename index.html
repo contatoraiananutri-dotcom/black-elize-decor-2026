@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#151513">
+  <meta name="description" content="Simule sua condição especial na campanha Black Elize Decor 2026. Descontos progressivos e vantagens para entrega em 2027.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Black Elize Decor 2026 | Simule sua economia">
+  <meta property="og:description" content="Quanto maior seu projeto, maior sua vantagem. Faça sua simulação.">
+  <title>Black Elize Decor 2026 | Simule sua economia</title>
+  <!-- Meta Pixel: inserir o snippet oficial e o ID da campanha quando disponíveis. -->
+  <style>
+    :root{color-scheme:dark;--bg:#151513;--panel:#22221f;--line:#494438;--gold:#e2c69a;--text:#f5f0e8;--muted:#c7bba8;--soft:#302b23}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+    main{width:min(100%,800px);margin:auto;padding:clamp(18px,4vw,36px) clamp(14px,4vw,24px) 30px}header{text-align:center;padding:18px 0 28px}small,.muted{color:var(--muted)}.brand{letter-spacing:4px;font-size:12px}h1{font:normal clamp(52px,12vw,72px)/1 Georgia,serif;margin:14px 0;letter-spacing:5px}h2{font:normal clamp(24px,5vw,30px)/1.2 Georgia,serif;margin:0 0 14px}header h2{margin:0 auto 14px}.gold{color:var(--gold)}header p{margin:12px 0 0}
+    section{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(18px,4vw,24px);margin:18px 0}label{display:block;margin:18px 0 8px;font-weight:550}input,select,button{font:inherit;min-height:50px;width:100%;padding:13px 14px;border-radius:9px;border:1px solid #625a4d;background:var(--bg);color:#fff}input:focus,select:focus,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}button{background:#dec39b;color:#171713;font-weight:700;cursor:pointer;margin-top:14px;border:0}button:hover:not(:disabled){background:#ead3ae}button:disabled{opacity:.55;cursor:not-allowed}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}.result{padding:16px;background:var(--soft);border:1px solid transparent;border-radius:12px;min-width:0;transition:background-color .2s,border-color .2s,box-shadow .2s,transform .2s}.result.is-selected{background:#393125;border:2px solid var(--gold);box-shadow:0 0 0 2px #e2c69a33,0 0 20px #e2c69a33;transform:translateY(-2px)}.result.is-selected>small:first-child{color:var(--gold);font-weight:700}.result-status{display:inline-block;min-height:1.5em;margin-top:8px;padding:2px 9px;border-radius:99px;font-size:11px;font-weight:700;color:var(--bg);background:var(--gold);visibility:hidden}.result.is-selected .result-status{visibility:visible}.money{font-size:clamp(20px,4vw,30px);font-weight:700;color:var(--gold);display:block;margin:7px 0;overflow-wrap:anywhere}.summary{text-align:center;padding:22px 0 4px}.summary .money{font-size:clamp(30px,7vw,38px)}p{line-height:1.6}table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:10px 5px;border-bottom:1px solid var(--line);text-align:left}th{color:var(--gold)}footer{text-align:center;font-size:12px;color:var(--muted);padding:8px 0 0}#status{font-size:13px;min-height:1.4em}.condition{border-left:2px solid var(--gold);padding-left:12px}
+    @media(max-width:420px){.grid{grid-template-columns:1fr}.grid .result{padding:14px}td,th{font-size:12px;padding:9px 3px}main{padding-left:12px;padding-right:12px}section{border-radius:14px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <small class="brand">ELIZE DECOR</small><h1>BLACK</h1>
+    <h2>Quanto maior seu projeto,<br>maior sua vantagem.</h2>
+    <p>Descontos de até <strong class="gold" style="font-size:28px">25%</strong> para transformar seus ambientes.</p>
+  </header>
+  <section aria-labelledby="sim-title">
+    <h2 id="sim-title">Simule sua economia</h2>
+    <label for="valor">Valor original estimado do projeto (R$)</label>
+    <input id="valor" type="number" min="0" step="0.01" value="20000" inputmode="decimal" autocomplete="off">
+    <label for="pag">Forma de pagamento</label>
+    <select id="pag"><option value="vista">À vista</option><option value="prazo">Até 10x sem juros no cartão</option></select>
+    <label for="entrega">Quando você precisa receber?</label>
+    <select id="entrega"><option value="ano">Ainda em 2026</option><option value="futuro">Em janeiro ou fevereiro de 2027</option></select>
+    <p id="aviso" class="muted" aria-live="polite"></p>
+    <div class="grid" aria-live="polite">
+      <div class="result" id="resultado2026"><small>Ainda em 2026</small><span class="money" id="normal"></span><small id="normald"></small><span class="result-status" id="status2026">Prazo selecionado</span></div>
+      <div class="result" id="resultado2027"><small>Em janeiro ou fevereiro de 2027</small><span class="money" id="futuro"></span><small id="futurod"></small><span class="result-status" id="status2027">Prazo selecionado</span></div>
+    </div>
+    <div class="summary"><small>SUA ECONOMIA ESTIMADA</small><span class="money" id="economia"></span><span id="final"></span><p id="parcelas"></p></div>
+    <button id="cta" type="button">Quero aproveitar minha condição pelo WhatsApp</button>
+    <p id="status" role="status" aria-live="polite"></p>
+    <small>Simulação ilustrativa, sujeita à confirmação do orçamento, produtos participantes e disponibilidade de entrega.</small>
+  </section>
+  <section>
+    <h2>Sua casa pronta para o Natal</h2><p>Feche seu pedido até 30/11 para aproveitar a programação de entrega antes do Natal, conforme disponibilidade e condições do projeto.</p>
+    <h2>Planeje 2027 e economize mais</h2><p>Programe sua entrega para janeiro ou fevereiro e receba mais 5 pontos percentuais de desconto em qualquer faixa participante.</p>
+  </section>
+  <section>
+    <h2>Condições da Black</h2>
+    <div style="overflow-x:auto"><table><thead><tr><th>Valor da compra</th><th>A prazo</th><th>À vista</th></tr></thead><tbody>
+      <tr><td>R$ 2.500 a 4.999,99</td><td>5%</td><td>10%</td></tr><tr><td>R$ 5.000 a 14.999,99</td><td>6%</td><td>15%</td></tr><tr><td>R$ 15.000 a 19.999,99</td><td>7%</td><td>17%</td></tr><tr><td>A partir de R$ 20.000</td><td>8%</td><td>20%</td></tr>
+    </tbody></table></div>
+    <p class="condition">Pagamento integral no ato do pedido: PIX, transferência bancária ou dinheiro à vista; ou valor total da compra no cartão de crédito em até 10x sem juros.</p>
+    <p>Condições por tempo limitado. Consulte a equipe comercial.</p>
+  </section>
+  <footer>ELIZE DECOR • BLACK 2026</footer>
+</main>
+<script>
+  'use strict';
+  const WHATSAPP='5544991373557';
+  // Integração futura: defina o Pixel ID e carregue o snippet oficial antes de ativar eventos.
+  // Os eventos abaixo usam fbq apenas quando o Pixel estiver instalado.
+  const $=id=>document.getElementById(id), br=n=>n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+  let simulacao=null;
+  function descontoBase(valor,pagamento){
+    if(valor<2500)return 0;
+    if(valor<5000)return pagamento==='vista'?10:5;
+    if(valor<15000)return pagamento==='vista'?15:6;
+    if(valor<20000)return pagamento==='vista'?17:7;
+    return pagamento==='vista'?20:8;
+  }
+  function atualizar(){
+    const valor=Math.max(0,Number($('valor').value)||0), pagamento=$('pag').value, entrega=$('entrega').value;
+    const base=descontoBase(valor,pagamento), janeiro=base?base+5:0, entregaFutura=entrega==='futuro', descontoAplicado=entregaFutura?janeiro:base;
+    const total=Math.round(valor*(100-descontoAplicado))/100, total2026=Math.round(valor*(100-base))/100, total2027=Math.round(valor*(100-janeiro))/100;
+    const economia=valor-total, parcelas=pagamento==='prazo'?total/10:null;
+    $('normal').textContent=br(total2026);$('futuro').textContent=br(total2027);
+    $('normald').textContent=base+'% de desconto';$('futurod').textContent=janeiro+'% de desconto';
+    $('resultado2026').classList.toggle('is-selected',!entregaFutura);$('resultado2027').classList.toggle('is-selected',entregaFutura);
+    $('economia').textContent=br(economia);$('final').textContent='Valor final: '+br(total)+' ('+descontoAplicado+'% OFF)';
+    $('parcelas').textContent=parcelas===null?'Pagamento integral no ato do pedido.':'Pagamento integral no ato do pedido: 10x de aproximadamente '+br(parcelas)+' sem juros no cartão.';
+    $('aviso').textContent=valor<2500?'Compra mínima de R$ 2.500 para participar.':'';$('cta').disabled=valor<2500;
+    simulacao={valor,pagamento,entrega,base,janeiro,descontoAplicado,total,total2026,total2027,economia,parcelas};
+  }
+  function montarMensagem(s){
+    const pagamento=$('pag').selectedOptions[0].text, entrega=$('entrega').selectedOptions[0].text;
+    return [
+      'Olá! Fiz uma simulação da Black Elize Decor 2026.',
+      'Valor original estimado do projeto: '+br(s.valor),
+      'Faixa da campanha: '+(s.valor<2500?'abaixo do mínimo de R$ 2.500':s.valor<5000?'R$ 2.500 a R$ 4.999,99':s.valor<15000?'R$ 5.000 a R$ 14.999,99':s.valor<20000?'R$ 15.000 a R$ 19.999,99':'a partir de R$ 20.000'),
+      'Pagamento: '+pagamento+' (integral no ato do pedido).',
+      'Entrega selecionada: '+entrega,
+      'Desconto para entrega em 2026: '+s.base+'% | valor: '+br(s.total2026),
+      'Desconto para janeiro/fevereiro de 2027: '+s.janeiro+'% | valor: '+br(s.total2027),
+      'Condição simulada: '+s.descontoAplicado+'% OFF | economia: '+br(s.economia)+' | valor final: '+br(s.total),
+      s.parcelas===null?'Pagamento à vista.':'Cartão: até 10x sem juros de aproximadamente '+br(s.parcelas)+'.',
+      'Gostaria de confirmar as condições.'
+    ].join('\n');
+  }
+  function track(eventName,params){if(typeof window.fbq==='function')window.fbq('track',eventName,params)}
+  $('valor').addEventListener('input',atualizar);
+  ['pag','entrega'].forEach(id=>$(id).addEventListener('change',atualizar));
+  $('cta').addEventListener('click',()=>{
+    if(!simulacao||simulacao.valor<2500)return;
+    track('Lead',{content_name:'Black Elize Decor 2026',value:simulacao.total,currency:'BRL'});
+    const mensagem=montarMensagem(simulacao);
+    window.location.href='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(mensagem);
+  });
+  atualizar();
+</script>
+</body>
+</html>
